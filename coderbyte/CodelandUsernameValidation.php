@@ -26,10 +26,9 @@ Output: true
 <?php 
 
 function CodelandUsernameValidation($str) {
-
-
+  
   // 1. The username is between 4 and 25 characters.
-  if (strlen($str) < 4 && strlen($str) > 25)
+  if (strlen($str) < 4 || strlen($str) > 25)
     return "false";
 
   // 2. It must start with a letter.
